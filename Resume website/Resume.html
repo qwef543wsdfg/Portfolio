@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aman - Web Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Aman</div>
+        <ul>
+            <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="#projects"><i class="fas fa-code"></i> Projects</a></li>
+            <li><a href="#skills"><i class="fas fa-tools"></i> Skills</a></li>
+            <li><a href="#resume"><i class="fas fa-file-alt"></i> Resume</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+        <button id="toggleMode">
+            <i class="fas fa-moon"></i>
+            <span>Dark Mode</span>
+        </button>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <h1>Aman</h1>
+            <p class="typing-text">Web Developer | Programmer | Designer</p>
+            <div class="cta-buttons">
+                <button onclick="window.location.href='#contact'" class="primary-btn">
+                    <span class="btn-content">
+                        <i class="fas fa-paper-plane"></i>
+                        Hire Me
+                    </span>
+                    <span class="btn-shine"></span>
+                </button>
+                <button onclick="window.location.href='#projects'" class="secondary-btn">
+                    <span class="btn-content">
+                        <i class="fas fa-code-branch"></i>
+                        View My Work
+                    </span>
+                    <span class="btn-shine"></span>
+                </button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+    
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    Hi, I'm Aman, a passionate web developer with experience in building responsive 
+                    and interactive websites. I specialize in HTML, CSS, JavaScript, and modern frameworks.
+                </p>
+                <p>
+                    With a strong foundation in web development and a keen eye for design, 
+                    I create engaging digital experiences that make a difference.
+                </p>
+            </div>
+            <div class="about-stats">
+                <div class="stat-item">
+                    <i class="fas fa-code"></i>
+                    <h3>100+</h3>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <h3>50+</h3>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-award"></i>
+                    <h3>5+</h3>
+                    <p>Years Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Frontend</h3>
+                <ul>
+                    <li><i class="fab fa-html5"></i> HTML5</li>
+                    <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                    <li><i class="fab fa-js"></i> JavaScript</li>
+                    <li><i class="fab fa-react"></i> React.js</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Backend</h3>
+                <ul>
+                    <li><i class="fab fa-node-js"></i> Node.js</li>
+                    <li><i class="fab fa-python"></i> Python</li>
+                    <li><i class="fab fa-django"></i> Django</li>
+                    <li><i class="fas fa-database"></i> SQL</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Tools</h3>
+                <ul>
+                    <li><i class="fab fa-git-alt"></i> Git</li>
+                    <li><i class="fab fa-github"></i> GitHub</li>
+                    <li><i class="fas fa-terminal"></i> Terminal</li>
+                    <li><i class="fas fa-code-branch"></i> Version Control</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="project 4/preview.jpg" alt="AI Website Preview">
+                </div>
+                <div class="project-content">
+                    <h3>AI Hub Website</h3>
+                    <p>A modern AI-powered website featuring interactive tools including AI chat, image generation, language translation, and voice recognition. Built with responsive design and smooth animations.</p>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>AI Integration</span>
+                    </div>
+                    <button class="view-btn" onclick="openProject4()">View Project</button>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="todo-list-preview.jpg" alt="Todo List Preview">
+                </div>
+                <div class="project-content">
+                    <h3>Todo List</h3>
+                    <p>A modern task management application with drag-and-drop functionality, local storage, and category organization.</p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Local Storage</span>
+                    </div>
+                    <button class="view-btn" onclick="openProject1()">View Project</button>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="expense-tracker-preview.jpg" alt="Expense Tracker Preview">
+                </div>
+                <div class="project-content">
+                    <h3>Expense Tracker</h3>
+                    <p>A comprehensive expense tracking tool with category management, data visualization, and CSV export features.</p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Chart.js</span>
+                    </div>
+                    <button class="view-btn" onclick="openProject2()">View Project</button>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="social-dashboard-preview.jpg" alt="Social Media Dashboard Preview">
+                </div>
+                <div class="project-content">
+                    <h3>Social Media Dashboard</h3>
+                    <p>A modern dashboard for tracking social media metrics with interactive charts and real-time updates.</p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Chart.js</span>
+                    </div>
+                    <button class="view-btn" onclick="openProject3()">View Project</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Resume Section -->
+    <section id="resume">
+        <h2>Resume</h2>
+        <div class="resume-content">
+            <div class="resume-preview">
+                <i class="fas fa-file-alt"></i>
+                <h3>Download My Resume</h3>
+                <p>Get a detailed overview of my experience and skills</p>
+            </div>
+            <button onclick="window.location.href='resume.pdf'" class="download-btn">
+                <i class="fas fa-download"></i> Download Resume
+            </button>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>your.email@example.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <p><a href="#">Your LinkedIn</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <p><a href="#">Your GitHub</a></p>
+                </div>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Aman. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+

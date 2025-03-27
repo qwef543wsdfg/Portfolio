@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Hub Website Preview</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+        }
+
+        .preview-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .preview-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .preview-header h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .preview-header p {
+            color: #666;
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .preview-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .preview-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .preview-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #3498db, #2ecc71);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .preview-content {
+            padding: 1.5rem;
+        }
+
+        .preview-content h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .preview-content p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .preview-features {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .preview-features h2 {
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .feature-item i {
+            color: #3498db;
+            font-size: 1.5rem;
+        }
+
+        .feature-item p {
+            color: #666;
+            margin: 0;
+        }
+
+        .preview-cta {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .preview-cta a {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .preview-cta a:hover {
+            background: #2980b9;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="preview-container">
+        <div class="preview-header">
+            <h1>AI Hub Website</h1>
+            <p>A modern AI-powered platform featuring interactive tools and seamless user experience</p>
+        </div>
+
+        <div class="preview-grid">
+            <div class="preview-card">
+                <div class="preview-image">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="preview-content">
+                    <h3>AI Chat Assistant</h3>
+                    <p>Interactive chat interface powered by advanced AI for natural conversations and helpful responses.</p>
+                </div>
+            </div>
+
+            <div class="preview-card">
+                <div class="preview-image">
+                    <i class="fas fa-image"></i>
+                </div>
+                <div class="preview-content">
+                    <h3>Image Generation</h3>
+                    <p>Create unique images from text descriptions using state-of-the-art AI image generation technology.</p>
+                </div>
+            </div>
+
+            <div class="preview-card">
+                <div class="preview-image">
+                    <i class="fas fa-language"></i>
+                </div>
+                <div class="preview-content">
+                    <h3>Language Translation</h3>
+                    <p>Real-time translation between multiple languages with natural language processing capabilities.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="preview-features">
+            <h2>Key Features</h2>
+            <div class="features-list">
+                <div class="feature-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <p>Responsive Design</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-bolt"></i>
+                    <p>Fast Performance</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-paint-brush"></i>
+                    <p>Modern UI/UX</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <p>Secure & Reliable</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="preview-cta">
+            <a href="index.html">View Live Project</a>
+        </div>
+    </div>
+</body>
+</html> 

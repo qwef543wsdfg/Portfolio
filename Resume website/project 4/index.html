@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Hub - Your Gateway to Artificial Intelligence</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>AI Hub</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#features">Features</a>
+                <a href="#tools">AI Tools</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Welcome to the Future of AI</h1>
+            <p>Explore the power of artificial intelligence with our cutting-edge tools and features</p>
+            <div class="hero-buttons">
+                <a href="#features" class="btn primary">Get Started</a>
+                <a href="#demo" class="btn secondary">Watch Demo</a>
+            </div>
+        </div>
+        <div class="hero-animation">
+            <!-- AI animation will be added here -->
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <h2>AI Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-robot"></i>
+                <h3>AI Chat Assistant</h3>
+                <p>Interact with our advanced AI chatbot for instant answers and assistance</p>
+                <button class="try-btn" onclick="openChat()">Try Now</button>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-image"></i>
+                <h3>Image Generation</h3>
+                <p>Create stunning images using AI-powered image generation technology</p>
+                <button class="try-btn" onclick="openImageGen()">Try Now</button>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-language"></i>
+                <h3>Language Translation</h3>
+                <p>Translate text between multiple languages with high accuracy</p>
+                <button class="try-btn" onclick="openTranslator()">Try Now</button>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-microphone"></i>
+                <h3>Voice Recognition</h3>
+                <p>Convert speech to text with our advanced voice recognition system</p>
+                <button class="try-btn" onclick="openVoiceRec()">Try Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Tools Section -->
+    <section class="tools" id="tools">
+        <h2>AI Tools</h2>
+        <div class="tools-container">
+            <!-- AI Chat Tool -->
+            <div class="tool-card" id="chatTool">
+                <div class="tool-header">
+                    <h3>AI Chat Assistant</h3>
+                    <button class="close-tool">&times;</button>
+                </div>
+                <div class="chat-messages">
+                    <!-- Messages will be dynamically added here -->
+                </div>
+                <div class="chat-input">
+                    <input type="text" placeholder="Type your message...">
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+
+            <!-- Image Generation Tool -->
+            <div class="tool-card" id="imageTool">
+                <div class="tool-header">
+                    <h3>AI Image Generation</h3>
+                    <button class="close-tool">&times;</button>
+                </div>
+                <div class="image-input">
+                    <input type="text" placeholder="Describe the image you want to generate...">
+                    <button onclick="generateImage()">Generate</button>
+                </div>
+                <div class="generated-image">
+                    <!-- Generated image will appear here -->
+                </div>
+            </div>
+
+            <!-- Translation Tool -->
+            <div class="tool-card" id="translationTool">
+                <div class="tool-header">
+                    <h3>AI Translation</h3>
+                    <button class="close-tool">&times;</button>
+                </div>
+                <div class="translation-input">
+                    <textarea placeholder="Enter text to translate..."></textarea>
+                    <select id="targetLang">
+                        <option value="es">Spanish</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="de">Hindi</option>
+                        <option value="de">Gujrati</option>
+                        <option value="de">Bihari</option>
+                        <option value="de">Bengali</option>
+                
+                    </select>
+                    <button onclick="translateText()">Translate</button>
+                </div>
+                <div class="translation-output">
+                    <!-- Translated text will appear here -->
+                </div>
+            </div>
+
+            <!-- Voice Recognition Tool -->
+            <div class="tool-card" id="voiceTool">
+                <div class="tool-header">
+                    <h3>Voice Recognition</h3>
+                    <button class="close-tool">&times;</button>
+                </div>
+                <div class="voice-controls">
+                    <button id="startRecording" onclick="startRecording()">
+                        <i class="fas fa-microphone"></i> Start Recording
+                    </button>
+                    <button id="stopRecording" onclick="stopRecording()" disabled>
+                        <i class="fas fa-stop"></i> Stop Recording
+                    </button>
+                </div>
+                <div class="transcription-output">
+                    <!-- Transcribed text will appear here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>About Our AI Technology</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Our AI platform combines cutting-edge machine learning algorithms with natural language processing to provide powerful and intuitive AI solutions.</p>
+                <div class="tech-stack">
+                    <h3>Technologies Used:</h3>
+                    <ul>
+                        <li>Natural Language Processing</li>
+                        <li>Computer Vision</li>
+                        <li>Deep Learning</li>
+                        <li>Neural Networks</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="about-stats">
+                <div class="stat-item">
+                    <span class="number">99%</span>
+                    <span class="label">Accuracy Rate</span>
+                </div>
+                <div class="stat-item">
+                    <span class="number">50+</span>
+                    <span class="label">Supported Languages</span>
+                </div>
+                <div class="stat-item">
+                    <span class="number">1M+</span>
+                    <span class="label">Processed Requests</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Get in Touch</h2>
+        <div class="contact-container">
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AI Hub</h3>
+                <p>Your gateway to the future of artificial intelligence.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#tools">AI Tools</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AI Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

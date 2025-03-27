@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-chart-line"></i>
+                <span>Dashboard</span>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li class="active">
+                        <a href="#overview">
+                            <i class="fas fa-home"></i>
+                            <span>Overview</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#analytics">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Analytics</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#posts">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Posts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#schedule">
+                            <i class="fas fa-calendar"></i>
+                            <span>Schedule</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#settings">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <button id="toggleMode">
+                    <i class="fas fa-moon"></i>
+                    <span>Dark Mode</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <h1>Social Media Dashboard</h1>
+                    <p>Welcome back, Admin!</p>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="profile">
+                        <img src="https://via.placeholder.com/40" alt="Profile">
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Facebook</h3>
+                        <p class="stat-number">2,450</p>
+                        <p class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> 12%
+                        </p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon twitter">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Twitter</h3>
+                        <p class="stat-number">1,850</p>
+                        <p class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> 8%
+                        </p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Instagram</h3>
+                        <p class="stat-number">3,250</p>
+                        <p class="stat-change negative">
+                            <i class="fas fa-arrow-down"></i> 5%
+                        </p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>LinkedIn</h3>
+                        <p class="stat-number">1,200</p>
+                        <p class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> 15%
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts-section">
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Engagement Overview</h3>
+                        <div class="chart-actions">
+                            <button class="btn">Weekly</button>
+                            <button class="btn active">Monthly</button>
+                            <button class="btn">Yearly</button>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="engagementChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Social Media Distribution</h3>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="distributionChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="recent-activity">
+                <div class="activity-header">
+                    <h3>Recent Activity</h3>
+                    <button class="btn">View All</button>
+                </div>
+                <div class="activity-list" id="activityList">
+                    <!-- Activity items will be added dynamically -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
